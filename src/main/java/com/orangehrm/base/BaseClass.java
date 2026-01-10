@@ -12,6 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -20,95 +21,85 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
 
 public class BaseClass {
-    protected static Properties prop;
-//    protected static WebDriver driver;
-//    private static ActionDriver actionDriver;
 
+    protected static Properties prop;
+
+    // ThreadLocal for WebDriver (Thread Safe)
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    private static ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
+
+    // ThreadLocal for ActionDriver (Legacy Support)
+    private static ThreadLocal<ActionDriver> actionDriverRepo = new ThreadLocal<>();
+
+    // NEW STATIC VARIABLE (For PageFactory Pages like AddEmployeePage)
+    public static ActionDriver action;
+
     public static final Logger logger = LoggerManager.getLogger(BaseClass.class);
 
-
-
     @BeforeSuite
-    public void loadConfig() throws IOException {
-        // Load config properties
-        prop = new Properties();
-        FileInputStream fis = new FileInputStream("src/main/resources/config.properties");
-        prop.load(fis);
-        logger.info("Configuration properties loaded successfully.");
+    public void loadConfig() {
+        try {
+            prop = new Properties();
+            String path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "config.properties";
 
-        // Start the extent report
-        ExtentManager.getReporter();
-
+            FileInputStream fis = new FileInputStream(path);
+            prop.load(fis);
+            logger.info("Configuration properties loaded successfully from: " + path);
+            ExtentManager.getReporter();
+        } catch (IOException e) {
+            e.printStackTrace();
+            logger.error("Failed to load config.properties.");
+        }
     }
+
     @BeforeMethod
-    // Initialize WebDriver based on the browser specified in properties
     public synchronized void setup() throws IOException {
-        System.out.println("Setting Up WebDriver for: " +this.getClass().getSimpleName());
-        lauchBrowser();
-        cofigureBrowser();
-        staticwait(2);
+        logger.info("Setting up WebDriver for class: " + this.getClass().getSimpleName());
 
-        logger.info("WebDriver Instance Created");
-        logger.trace("Trace Message)");
-        logger.error("Error Message");
-        logger.debug("debug Message");
-        logger.fatal("fatal Message");
-        logger.warn("Warn Message");
-/*
-        //Initialize the actionDriver only once
-        if (actionDriver == null) {
-            actionDriver = new ActionDriver(driver);
-            logger.info("ActionDriver instance is created. "+Thread.currentThread().getId());
-        }*/
+        launchBrowser();
+        configureBrowser();
+        staticWait(2);
 
-    //initialize ActionDriver for the current Thread
-    actionDriver.set(new ActionDriver(getDriver()));
-    logger.info("ActionDriver instance is created for Thread: " + Thread.currentThread().getId());
+        // --- CRITICAL FIX: Initialize BOTH variables ---
 
+        // 1. Initialize the object
+        ActionDriver act = new ActionDriver(getDriver());
+
+        // 2. Assign to Static Variable (For New PageFactory tests)
+        action = act;
+
+        // 3. Assign to ThreadLocal (For Old Legacy tests)
+        actionDriverRepo.set(act);
+
+        logger.info("ActionDriver initialized for Thread ID: " + Thread.currentThread().getId());
     }
 
-    // Launch browser based on configuration
-    private synchronized void lauchBrowser() {
+    private synchronized void launchBrowser() {
+        if (prop == null) throw new RuntimeException("Config properties not loaded.");
         String browser = prop.getProperty("browser");
+
         if (browser.equalsIgnoreCase("chrome")) {
-            //driver = new ChromeDriver();
             driver.set(new ChromeDriver());
-            ExtentManager.registerDriver(getDriver());
-            logger.info("Chrome Browser Launched");
         } else if (browser.equalsIgnoreCase("firefox")) {
-            //driver = new FirefoxDriver();
             driver.set(new FirefoxDriver());
-            ExtentManager.registerDriver(getDriver());
-            logger.info("Firefox Browser Launched");
         } else if (browser.equalsIgnoreCase("edge")) {
-            //driver = new EdgeDriver();
             driver.set(new EdgeDriver());
-            ExtentManager.registerDriver(getDriver());
-            logger.info("Edge Browser Launched");
         } else {
-            throw new IllegalArgumentException("Browser not supported");
+            throw new IllegalArgumentException("Browser not supported: " + browser);
         }
-
+        ExtentManager.registerDriver(getDriver());
     }
 
-
-    //configuring browser methods
-    private void cofigureBrowser() throws IOException {
-        int implicitWait = Integer.parseInt(prop.getProperty("implicitWait"));
-        driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
-        // Maximize window
-        driver.get().manage().window().maximize();
-        // Navigate to URL
-        try{
-        driver.get().get(prop.getProperty("url"));
-        }catch (Exception e){
-            System.out.println("Unable to navigate to the URL: "+ e.getMessage());
+    private void configureBrowser() {
+        try {
+            String waitProp = prop.getProperty("implicitWait");
+            int implicitWait = (waitProp != null) ? Integer.parseInt(waitProp) : 10;
+            getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
+            getDriver().manage().window().maximize();
+            getDriver().get(prop.getProperty("url"));
+        } catch (Exception e) {
+            logger.error("Error during browser configuration: " + e.getMessage());
         }
     }
-
-
 
     @AfterMethod
     public synchronized void tearDown() {
@@ -116,52 +107,28 @@ public class BaseClass {
             try {
                 getDriver().quit();
             } catch (Exception e) {
-                logger.info("Error while quitting the driver: " + e.getMessage());
+                logger.error("Error while quitting: " + e.getMessage());
             }
         }
-        logger.info("WebDriver isntance closed.");
         driver.remove();
-        actionDriver.remove();
-//        driver = null;
-//        actionDriver = null;
+        actionDriverRepo.remove();
         ExtentManager.endTest();
     }
-    /*
 
-    //Driver getter method
-    public WebDriver getDriver() {
-        return driver;
-    }*/
-
-    //Getter method for Webdriver
     public static WebDriver getDriver() {
-        if (driver.get() == null) {
-            throw new IllegalStateException("WebDriver has not been initialized. Call setup() method first.");
-        }
         return driver.get();
     }
 
-    //Getter method for ActionDriver
+    // OLD Getter (Kept for Legacy Tests)
     public static ActionDriver getActionDriver() {
-        if (actionDriver.get() == null) {
-            logger.info("ActionDriver is not initialized");
-            throw new IllegalStateException("WebDriver has not been initialized. Call setup() method first.");
-        }
-        return actionDriver.get();
+        return actionDriverRepo.get();
     }
 
-    //Getter Method for prop
-    public static Properties getProp(){
+    public static Properties getProp() {
         return prop;
     }
-    //Driver Setter Method
-    public void setDriver(ThreadLocal<WebDriver> driver) {
-        this.driver = driver;
-    }
 
-    public void staticwait(int seconds){
+    public void staticWait(int seconds) {
         LockSupport.parkNanos(TimeUnit.SECONDS.toNanos(seconds));
     }
-
-
-    }
+}

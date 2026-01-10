@@ -7,14 +7,16 @@ import org.testng.annotations.Test;
 
 public class DummyClass extends BaseClass {
     @Test
-    public void dummyTest() {
-        ExtentManager.satrtTest("Dummy Test Started");
+    public void DummyTest() {
+        //ExtentManager.satrtTest("Dummy Test Started");
 
         String title = getDriver().getTitle();
 
-        ExtentManager.satrtTest("Verifying Title of the Page");
+        //ExtentManager.satrtTest("Verifying Title of the Page");
         assert title.equals("OrangeHRM"): "Test Failed - Title does not match!";
+
         System.out.println("Test passed. Title is Matching:");
+        ExtentManager.logSkip("This case is skipped");
         throw new SkipException("Skipping this test deliberately");
 
     }

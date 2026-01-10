@@ -1,45 +1,73 @@
 package com.orangehrm.listeners;
 
+import com.orangehrm.base.BaseClass;
 import com.orangehrm.utilities.ExtentManager;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.io.IOException;
+
 public class ListenerClass implements ITestListener {
 
-    // Jab koi bhi @Test method shuru hoga
+    @Override
     public void onTestStart(ITestResult result) {
-        // Test ka naam utha kar report main start karega
-        ExtentManager.satrtTest(result.getMethod().getMethodName());
+        ExtentManager.startTest(result.getMethod().getMethodName());
     }
 
-    // Jab Test Pass ho jaye
+    @Override
     public void onTestSuccess(ITestResult result) {
-        ExtentManager.getTest().pass("Test Passed Successfully");
+        if (ExtentManager.getTest() != null) {
+            ExtentManager.getTest().pass("Test Passed Successfully");
+        }
     }
 
-    // Jab Test Fail ho jaye
+    @Override
     public void onTestFailure(ITestResult result) {
-        // Fail log karein
-        ExtentManager.getTest().fail("Test Failed: " + result.getThrowable());
+        // 1. Try to get Driver
+        WebDriver driver = null;
+        try {
+            driver = BaseClass.getDriver();
+        } catch (Exception e) {
+            // Driver might not be initialized if test failed in DataProvider
+        }
 
-        // Screenshot logic yahan call kar sakte hain agar driver ka access ho
-        // Filhal sirf text log kar rahe hain taake complexity na barhay
+        // 2. Print REAL Error to Console (Critical for debugging)
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("TEST FAILURE: " + result.getName());
+        System.out.println("ERROR MESSAGE: " + result.getThrowable().getMessage());
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+        // 3. Log to Report (Only if Report exists)
+        if (ExtentManager.getTest() != null) {
+            try {
+                if (driver != null) {
+                    ExtentManager.logFailure(driver, "Test Failed: " + result.getThrowable().getMessage(), "FailureScreenshot");
+                } else {
+                    ExtentManager.getTest().fail("Test Failed (No Driver): " + result.getThrowable().getMessage());
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
+    @Override
     public void onTestSkipped(ITestResult result) {
-        ExtentManager.getTest().skip("Test Skipped");
+        if (ExtentManager.getTest() != null) {
+            ExtentManager.getTest().skip("Test Skipped");
+        }
     }
 
-    // Jab pori Suite start ho
+    @Override
     public void onStart(ITestContext context) {
-        // Report setup initialize ho jayega
+        ExtentManager.cleanScreenshotsDirectory();
         ExtentManager.getReporter();
     }
 
-    // Jab sab kuch khatam ho jaye (Sab se Zaroori step)
+    @Override
     public void onFinish(ITestContext context) {
-        // Yeh report ko save karega (flush)
         ExtentManager.endTest();
     }
 }

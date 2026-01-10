@@ -47,7 +47,7 @@ public class ExtentManager {
 
     //start the test
 
-    public synchronized static ExtentTest satrtTest(String testName){
+    public synchronized static ExtentTest startTest(String testName){
         ExtentTest extentTest = getReporter().createTest(testName);
         test.set(extentTest);
         return extentTest;
@@ -75,9 +75,10 @@ public class ExtentManager {
     }
 
     // log a step
-    public static void logstep(String logMessage)
-    {
-        getTest().info("logMessage");
+// log a step
+    public static void logstep(String logMessage) {
+        // Variable se quotes hata diye hain
+        getTest().info(logMessage);
     }
 
     //log step validation with screenshot
@@ -101,23 +102,35 @@ public class ExtentManager {
         getTest().skip(logMessage);
     }
     //Take screenshot with date and time
-    public synchronized static String takeScreenshot(WebDriver driver, String screenshotName) throws IOException {
+     public synchronized static String takeScreenshot(WebDriver driver, String screenshotName) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File src = ts.getScreenshotAs(OutputType.FILE);
-        //format date and time for file name
-        String timeStapmp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 
-        //Saving the screenshot to a file
-        String destPath = System.getProperty("user.dir") + "src/test/resources/screenshots"+screenshotName +"_"+timeStapmp+".png";
+        // Date format
+        String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+
+        // FOLDER PATH (Safe Logic)
+        // Pehle path banayein
+        String directoryPath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "screenshots";
+
+        // Check karein folder hai ya nahi, agar nahi to banayein
+        File directory = new File(directoryPath);
+        if (!directory.exists()) {
+            directory.mkdirs(); // Yeh folder create kar dega
+        }
+
+        // Final File Path
+        String destPath = directoryPath + File.separator + screenshotName + "_" + timeStamp + ".png";
         File finalPath = new File(destPath);
+
         try {
             FileUtils.copyFile(src, finalPath);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //convert screensht to base64 for embedding in extent report
-        String base64Format = converToBase64(src);
-        return base64Format;
+
+        // Base64 return karein
+        return converToBase64(src);
     }
     //convert screenshot to base64
     public static String converToBase64(File screenShotFile) throws IOException {
@@ -143,6 +156,22 @@ public class ExtentManager {
 
         }
 
+    }
+    // --- NEW METHOD TO CLEAN SCREENSHOTS FOLDER ---
+    public static void cleanScreenshotsDirectory() {
+        try {
+            String path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "screenshots";
+            File directory = new File(path);
+
+            if (directory.exists()) {
+                // Yeh folder ke andar ki tamam files delete kar dega
+                FileUtils.cleanDirectory(directory);
+                System.out.println("Screenshots folder cleaned successfully.");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to clean screenshots folder.");
+        }
     }
 
     //Register webDriver for current Thread

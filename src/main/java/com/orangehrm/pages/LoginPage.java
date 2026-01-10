@@ -3,7 +3,6 @@ package com.orangehrm.pages;
 import com.orangehrm.actiondriver.ActionDriver;
 import com.orangehrm.base.BaseClass;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
 
@@ -16,7 +15,7 @@ public class LoginPage {
         this.actionDriver = new ActionDriver(driver);
     }*/
 
-    public LoginPage(WebDriver driver){
+    public LoginPage(){
         this.actionDriver = BaseClass.getActionDriver();
 
     }

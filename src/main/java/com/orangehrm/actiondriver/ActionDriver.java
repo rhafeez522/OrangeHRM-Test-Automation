@@ -21,202 +21,171 @@ public class ActionDriver {
 
     public ActionDriver(WebDriver driver) {
         this.driver = driver;
-        int explicitwait = Integer.parseInt(BaseClass.getProp().getProperty("explicitWait"));
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        logger.info("WebDriver instance is created in ActionDriver");
+        String waitProp = BaseClass.getProp().getProperty("explicitWait");
+        int explicitWait = (waitProp != null) ? Integer.parseInt(waitProp) : 30;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWait));
+        logger.info("ActionDriver initialized.");
     }
 
-    //Method to click an Element
-    public void click(By by) throws IOException {
-        String elementDescription = getElementDescription(by);
-        try {
-            waitForElementToBeClickable(by);
-            driver.findElement(by).click();
-            ExtentManager.logstep("Clicked on element: " + elementDescription);
-            logger.info("Clicked on element"+ elementDescription);
-        } catch (Exception e) {
-            System.out.println("Unable to click on element: " + e.getMessage());
-            ExtentManager.logFailure(BaseClass.getDriver(), "Unable to click element:", elementDescription+"Unable to click on element: " + e.getMessage());
-            logger.error("Unable to click on element: " + e.getMessage());
-        }
-    }
+    // ================================================================
+    //  SECTION 1: NEW METHODS FOR WEBELEMENT (@FindBy Support)
+    // ================================================================
 
-    //method to enter text in the textfield
-    public void enterText(By by, String value) {
-        try {
-            waitForElementToBeVisible(by);
-            //driver.findElement(by).clear();
-            //driver.findElement(by).sendKeys(value);
-            WebElement element = driver.findElement(by);
-            element.clear();
-            element.sendKeys(value);
-            logger.info("Entered text: " +getElementDescription(by) +" "+value);
-        } catch (Exception e) {
-            logger.error("Unable to enter text in element: " + e.getMessage());
-        }
-    }
-
-    //Method to get text from input field
-    public String getText(By by) {
-        try {
-            waitForElementToBeVisible(by);
-            return driver.findElement(by).getText();
-        } catch (Exception e) {
-            logger.error("Unable to get text from element: " + e.getMessage());
-            return "";
-        }
-    }
-
-    //Method to compare two strings
-    public boolean compareText(By by, String expectedText) {
-        try {
-            waitForElementToBeVisible(by);
-            String actualText = driver.findElement(by).getText();
-            if (expectedText.equals(actualText)) {
-                logger.info("Text matches: " + actualText);
-                ExtentManager.logStepWithScreenshot(BaseClass.getDriver(),"Compare Text", "Text Verified Successfully! "+actualText + " equals " + expectedText);
-                
-                return true;
-            } else {
-                logger.error("Text does not match. Expected: " + expectedText + ", Actual: " + actualText);
-                ExtentManager.logFailure(BaseClass.getDriver(),"Compare Text", "Text Comparison Failed "+actualText + "Not equals " + expectedText);
-                return false;
-            }
-        } catch (Exception e) {
-            logger.error("Unable to compare text: " + e.getMessage());
-        }
-    return false;
-    }
-
-    //Method to check if an element is displayed
-
-    /*
-    public boolean isDisplayed(By by) {
-        try {
-            waitForElementToBeVisible(by);
-
-            boolean isDesplayed = driver.findElement(by).isDisplayed();
-            if (isDesplayed) {
-                System.out.println("Element is displayed");
-            } else {
-                System.out.println("Element is not displayed");
-            }
-        } catch (Exception e) {
-            System.out.println("Unable to determine if element is displayed: " + e.getMessage());
-            return false;
-        }
-
-        return false;
-    }
+    /**
+     * Click method for WebElement.
+     * Handles exceptions internally to keep Page classes clean.
      */
-    //simple isDisplayed method
-    public boolean isDisplayed(By by) {
+// Updated Click Method with JavaScript Fallback
+    public void click(WebElement element) throws IOException {
         try {
-            waitForElementToBeVisible(by);
-            WebElement element = driver.findElement(by);
-            logger.info("Element is displayed: " + getElementDescription(by));
-            ExtentManager.logstep("Element is displayed: " + getElementDescription(by));
-            return element != null && element.isDisplayed();
+            // 1. Try Normal Click first
+            waitForElementToBeClickable(element);
+            element.click();
+            logger.info("Clicked on element: " + element.toString());
+            ExtentManager.logstep("Clicked on element");
         } catch (Exception e) {
-            logger.error("Element not displayed: " + e.getMessage());
-            //ExtentManager.logFailure(BaseClass.getDriver(),"Element is not displayed: " , "Element is not displayed: " + getElementDescription(by));
+            // 2. If Normal Click fails, try JavaScript "Force Click"
+            logger.info("Standard click failed, attempting JavaScript click...");
+            try {
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", element);
+                logger.info("JavaScript click successful on: " + element.toString());
+                ExtentManager.logstep("JS Clicked on element");
+            } catch (Exception jsException) {
+                // 3. If both fail, log the error
+                logger.error("All click attempts failed: " + jsException.getMessage());
+                ExtentManager.logFailure(driver, "Click Failed", jsException.getMessage());
+            }
+        }
+    }
+
+    public void type(WebElement element, String text) {
+        try {
+            waitForElementToBeVisible(element);
+            element.clear();
+            element.sendKeys(text);
+            logger.info("Entered text: " + text);
+            ExtentManager.logstep("Entered text: " + text);
+        } catch (Exception e) {
+            logger.error("Unable to enter text: " + e.getMessage());
+        }
+    }
+
+    public boolean isDisplayed(WebElement element) {
+        try {
+            waitForElementToBeVisible(element);
+            return element.isDisplayed();
+        } catch (Exception e) {
             return false;
         }
     }
 
-
-    //wait fo page to load
-    public void waitForPageToLoad(int timeOutInSec){
+    public void waitForElementToBeClickable(WebElement element) {
         try {
-            wait.withTimeout(Duration.ofSeconds(timeOutInSec)).until(WebDriver -> ((JavascriptExecutor) WebDriver).executeScript("return document.readyState").equals("complete"));
-            logger.info("Page loaded successfully");
-        }
-        catch (Exception e){
-            logger.error("Page did not load within " + timeOutInSec + " seconds: " + e.getMessage());
-        }
-    }
-    //scroll to element
-    public void scrollToElement(By by){
-        try{
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        WebElement element = driver.findElement(by);
-        js.executeScript("arguments[0], scrollIntoView(true);", element);
-        } catch (Exception e) {
-            logger.error("Unable to scroll to element: " + e.getMessage());
-        }
-    }
-    //wait for element to be clickable
-    private void waitForElementToBeClickable(By by) {
-
-        try {
-        wait.until(ExpectedConditions.elementToBeClickable(by));
+            wait.until(ExpectedConditions.elementToBeClickable(element));
         } catch (Exception e) {
             logger.error("Element not clickable: " + e.getMessage());
         }
     }
-    //wait for element to be visible
-    private void waitForElementToBeVisible(By by) {
 
+    public void waitForElementToBeVisible(WebElement element) {
         try {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+            wait.until(ExpectedConditions.visibilityOf(element));
         } catch (Exception e) {
             logger.error("Element not visible: " + e.getMessage());
         }
     }
 
-    //Method to get the description of an element
-    public String getElementDescription(By locator){
-        //check for null driver or locator to avoid NullPointer exception
-        if (driver == null)
-            return "Driver is null";
-        if (locator == null)
-                return "Locator is null";
-        //find the element using locator
+    public String getElementDescription(WebElement element) {
         try {
-            WebElement element = driver.findElement(locator);
-
-            //get element description
-            String name = element.getDomAttribute("name");
-            String id = element.getDomAttribute("id");
-            String className = element.getDomAttribute("class");
-            String text = element.getDomAttribute("text");
-            String placeHolder = element.getDomAttribute("placeholder");
-
-            //return the description based on element attributes
-            if (isNotEmpty(name)){
-                return "Element with name:"+name;
-            }
-            else if(isNotEmpty(id)){
-                return "Element with id:"+id;
-            }
-            else if(isNotEmpty(className)){
-                return "Element with class:"+className;
-            }
-            else if(isNotEmpty(text)){
-                return "Element with text:"+truncate(text,30);
-            }
-            else if(isNotEmpty(placeHolder)){
-                return "Element with placeholder:"+placeHolder;
-
-            }
+            return element.toString();
         } catch (Exception e) {
-            logger.error("Unable to get element description: " + e.getMessage());
+            return "Unknown Element";
         }
-        return "Unalbe to describe element";
     }
-    //Utililty method to check the string is not null or empty
-    private boolean isNotEmpty(String value){
-        return value!=null && !value.isEmpty();
 
-    }
-    //utility method to truncate long string
-    private String truncate(String value, int maxlength){
-        if (value==null||value.length()<=maxlength){
-            return value;
+    // ================================================================
+    //  SECTION 2: OLD METHODS FOR BY LOCATORS (Legacy Support)
+    // ================================================================
+
+    public void click(By by) throws IOException {
+        try {
+            waitForElementToBeClickable(by);
+            driver.findElement(by).click();
+            ExtentManager.logstep("Clicked on element");
+            logger.info("Clicked on element");
+        } catch (Exception e) {
+            logger.error("Unable to click: " + e.getMessage());
         }
-        return value.substring(0,maxlength)+"...";
     }
 
+    public void enterText(By by, String value) {
+        try {
+            waitForElementToBeVisible(by);
+            WebElement element = driver.findElement(by);
+            element.clear();
+            element.sendKeys(value);
+            logger.info("Entered text: " + value);
+        } catch (Exception e) {
+            logger.error("Unable to enter text: " + e.getMessage());
+        }
+    }
 
+    public String getText(By by) {
+        try {
+            waitForElementToBeVisible(by);
+            return driver.findElement(by).getText();
+        } catch (Exception e) {
+            return "";
+        }
+    }
 
+    public boolean compareText(By by, String expectedText) {
+        try {
+            waitForElementToBeVisible(by);
+            String actualText = driver.findElement(by).getText();
+            return expectedText.equals(actualText);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isDisplayed(By by) {
+        try {
+            waitForElementToBeVisible(by);
+            return driver.findElement(by).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void scrollToElement(By by){
+        try{
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            WebElement element = driver.findElement(by);
+            js.executeScript("arguments[0].scrollIntoView(true);", element);
+        } catch (Exception e) {
+            logger.error("Unable to scroll: " + e.getMessage());
+        }
+    }
+
+    private void waitForElementToBeClickable(By by) {
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(by));
+        } catch (Exception e) {
+            logger.error("Element not clickable: " + e.getMessage());
+        }
+    }
+
+    private void waitForElementToBeVisible(By by) {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        } catch (Exception e) {
+            logger.error("Element not visible: " + e.getMessage());
+        }
+    }
+
+    public String getElementDescription(By locator){
+        return locator.toString();
+    }
 }

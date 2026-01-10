@@ -1,47 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN" monitorInterval="30">
     <Appenders>
-        <!-- Console appender -->
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %c{1} - %msg%n"/>
         </Console>
 
-        <!-- Error file appender -->
         <File name="ErrorFile" fileName="logs/error.log" append="true">
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %c - %msg%n"/>
             <Filters>
                 <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
             </Filters>
+        </File> <RollingFile name="RollingFile"
+                             fileName="logs/app.log"
+                             filePattern="logs/app-%d{yyyy-MM-dd}-%i.log.gz">
+        <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %c - %msg%n"/>
+        <Policies>
+            <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            <SizeBasedTriggeringPolicy size="20MB"/>
+        </Policies>
+        <DefaultRolloverStrategy max="30"/>
+    </RollingFile>
 
-        <!-- Rolling file appender -->
-        <RollingFile name="RollingFile"
-                     fileName="logs/app.log"
-                     filePattern="logs/app-%d{yyyy-MM-dd}-%i.log.gz">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %c - %msg%n"/>
-            <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="20MB"/>
-            </Policies>
-            <DefaultRolloverStrategy max="30"/>
-        </RollingFile>
-
-        <!-- Optional async wrapper for performance -->
         <Async name="AsyncFile">
             <AppenderRef ref="RollingFile"/>
         </Async>
     </Appenders>
 
     <Loggers>
-        <!-- Package specific logger -->
         <Logger name="com.orangehrm" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="AsyncFile"/>
+            <AppenderRef ref="ErrorFile"/>
         </Logger>
 
-        <!-- Root logger -->
         <Root level="info">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="AsyncFile"/>
+            <AppenderRef ref="ErrorFile"/>
         </Root>
     </Loggers>
 </Configuration>

@@ -1,281 +1,192 @@
-2026-01-05 19:54:19.950 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
-2026-01-05 19:54:20.820 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml
+2026-01-10 13:08:46.241 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
+2026-01-10 13:08:47.070 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml
 
-2026-01-05 19:54:20.881 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully.
-2026-01-05 19:54:36.729 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 19:54:36.729 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 19:54:37.112 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 19:54:41.459 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 19:54:46.594 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 19:54:46.594 [TestNG-test-OrangeHRMTest-4] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 19:54:46.595 [TestNG-test-OrangeHRMTest-4] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 19:54:46.595 [TestNG-test-OrangeHRMTest-4] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 19:54:46.599 [TestNG-test-OrangeHRMTest-4] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 19:54:46.608 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 19:54:46.609 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 35
-2026-01-05 19:54:46.800 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 19:54:46.801 [TestNG-test-OrangeHRMTest-2] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 19:54:46.801 [TestNG-test-OrangeHRMTest-2] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 19:54:46.802 [TestNG-test-OrangeHRMTest-2] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 19:54:46.802 [TestNG-test-OrangeHRMTest-2] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 19:54:46.802 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 19:54:46.803 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 33
-2026-01-05 19:54:49.634 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username admin
-2026-01-05 19:54:50.554 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password admin123
-2026-01-05 19:54:51.481 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 19:54:51.481 [TestNG-test-OrangeHRMTest-3] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 19:54:51.481 [TestNG-test-OrangeHRMTest-3] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 19:54:51.483 [TestNG-test-OrangeHRMTest-3] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 19:54:51.483 [TestNG-test-OrangeHRMTest-3] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 19:54:51.483 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 19:54:51.483 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 34
-2026-01-05 19:54:51.939 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 19:54:51.943 [TestNG-test-OrangeHRMTest-1] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 19:54:51.943 [TestNG-test-OrangeHRMTest-1] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 19:54:51.943 [TestNG-test-OrangeHRMTest-1] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 19:54:51.945 [TestNG-test-OrangeHRMTest-1] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 19:54:51.945 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 19:54:51.945 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 32
-2026-01-05 19:54:52.614 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username invalidUser
-2026-01-05 19:54:53.114 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password invalidPass
-2026-01-05 19:54:55.308 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 19:54:55.497 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 19:54:56.491 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Text matches: Invalid credentials
-2026-01-05 19:54:56.573 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Element is displayed: Unalbe to describe element
-2026-01-05 19:55:03.619 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 19:55:03.661 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 19:55:03.915 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 19:55:04.855 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 19:55:06.483 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 19:55:17.536 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 19:55:17.539 [TestNG-test-OrangeHRMTest-3] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 19:55:17.541 [TestNG-test-OrangeHRMTest-3] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 19:55:17.543 [TestNG-test-OrangeHRMTest-3] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 19:55:17.544 [TestNG-test-OrangeHRMTest-3] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 19:55:17.546 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 19:55:17.548 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 34
-2026-01-05 19:55:18.154 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username admin
-2026-01-05 19:55:18.515 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password admin123
-2026-01-05 19:55:20.438 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 19:55:21.132 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Element is displayed: Element with class:oxd-text oxd-text--span oxd-main-menu-item--name
-2026-01-05 19:55:21.621 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-userdropdown-name
-2026-01-05 19:55:23.236 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-userdropdown-link
-2026-01-05 19:55:27.089 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 19:58:39.474 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
-2026-01-05 19:58:40.320 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml
+2026-01-10 13:08:47.173 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully from: C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\main\resources\config.properties
+2026-01-10 13:08:48.102 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: AddEmployeeTest
+2026-01-10 13:08:58.446 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 13:08:58.449 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 13:09:06.762 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 13:09:07.268 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 13:09:07.578 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 13:09:21.709 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (4260cb4867ae679b05b43218ce432400)] -> xpath: //span[text()='PIM']]
+2026-01-10 13:09:27.121 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (4260cb4867ae679b05b43218ce432400)] -> xpath: //a[text()='Add Employee']]
+2026-01-10 13:09:28.166 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Ali
+2026-01-10 13:09:28.649 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Khan Shoukat
+2026-01-10 13:09:29.035 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (4260cb4867ae679b05b43218ce432400)] -> xpath: //button[@type='submit']]
+2026-01-10 13:10:10.398 [main] ERROR com.orangehrm.utilities.LoggerManager - Element not visible: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[contains(text(), 'Successfully Saved')]' (tried for 30 second(s) with 500 milliseconds interval)
+2026-01-10 14:02:37.212 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
+2026-01-10 14:02:37.975 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml
 
-2026-01-05 19:58:40.365 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully.
-2026-01-05 19:59:30.634 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
-2026-01-05 19:59:31.469 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml
+2026-01-10 14:02:38.061 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully from: C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\main\resources\config.properties
+2026-01-10 14:02:38.819 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: AddEmployeeTest
+2026-01-10 14:02:56.298 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 14:02:56.299 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 14:02:57.026 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 14:02:57.329 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 14:02:59.610 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 14:03:03.142 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (61bf09e6821a0819af5ce8138e67dc3e)] -> xpath: //span[text()='PIM']]
+2026-01-10 14:03:05.398 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (61bf09e6821a0819af5ce8138e67dc3e)] -> xpath: //a[text()='Add Employee']]
+2026-01-10 14:03:05.399 [main] ERROR com.orangehrm.utilities.LoggerManager - Element not visible: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null
+2026-01-10 14:03:05.405 [main] ERROR com.orangehrm.utilities.LoggerManager - Unable to enter text: Cannot invoke "org.openqa.selenium.WebElement.clear()" because "element" is null
+2026-01-10 14:03:05.405 [main] ERROR com.orangehrm.utilities.LoggerManager - Element not visible: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null
+2026-01-10 14:03:05.405 [main] ERROR com.orangehrm.utilities.LoggerManager - Unable to enter text: Cannot invoke "org.openqa.selenium.WebElement.clear()" because "element" is null
+2026-01-10 14:03:05.405 [main] ERROR com.orangehrm.utilities.LoggerManager - Element not clickable: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null
+2026-01-10 14:03:05.412 [main] INFO  com.orangehrm.utilities.LoggerManager - Standard click failed, attempting JavaScript click...
+2026-01-10 14:03:05.455 [main] ERROR com.orangehrm.utilities.LoggerManager - All click attempts failed: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=143.0.7499.170)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [61bf09e6821a0819af5ce8138e67dc3e, executeScript {script=arguments[0].click();, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\rhafe\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56329}, goog:processID: 15532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56329/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 61bf09e6821a0819af5ce8138e67dc3e
+2026-01-10 14:03:06.044 [main] ERROR com.orangehrm.utilities.LoggerManager - Element not visible: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null
+2026-01-10 14:10:08.140 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
+2026-01-10 14:10:08.900 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml
 
-2026-01-05 19:59:31.615 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully.
-2026-01-05 20:02:49.438 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
-2026-01-05 20:02:50.238 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml
+2026-01-10 14:10:08.970 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully from: C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\main\resources\config.properties
+2026-01-10 14:10:09.689 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: AddEmployeeTest
+2026-01-10 14:10:28.060 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 14:10:28.060 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 14:10:28.552 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 14:10:28.853 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 14:10:29.221 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 14:10:34.583 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (653b48794cf3cbcbca23b8cf150a00db)] -> xpath: //span[text()='PIM']]
+2026-01-10 14:10:36.510 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (653b48794cf3cbcbca23b8cf150a00db)] -> xpath: //a[text()='Add Employee']]
+2026-01-10 14:10:37.296 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Raja
+2026-01-10 14:10:37.859 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Hafeez
+2026-01-10 14:10:38.267 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (653b48794cf3cbcbca23b8cf150a00db)] -> xpath: //button[@type='submit']]
+2026-01-10 18:13:09.560 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
+2026-01-10 18:13:13.728 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml
 
-2026-01-05 20:02:50.293 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully.
-2026-01-05 20:05:15.757 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
-2026-01-05 20:05:17.092 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml
+2026-01-10 18:13:13.963 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully from: C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\main\resources\config.properties
+2026-01-10 18:13:17.938 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: AddEmployeeTest
+2026-01-10 18:13:33.634 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 18:13:33.635 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 18:13:35.778 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 18:13:36.005 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 18:13:36.201 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 18:13:40.824 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (12080f63a71cfdccb2fba208402c494b)] -> xpath: //span[text()='PIM']]
+2026-01-10 18:13:42.961 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (12080f63a71cfdccb2fba208402c494b)] -> xpath: //a[text()='Add Employee']]
+2026-01-10 18:13:43.241 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Ahmed
+2026-01-10 18:13:43.506 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Ali
+2026-01-10 18:13:43.759 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (12080f63a71cfdccb2fba208402c494b)] -> xpath: //button[@type='submit']]
+2026-01-10 18:13:51.732 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: AddEmployeeTest
+2026-01-10 18:13:56.764 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 18:13:56.764 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 18:13:58.240 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 18:13:58.503 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 18:14:00.202 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 18:14:03.569 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (c1f6f8507c8a7088aff6397721ca8f3c)] -> xpath: //span[text()='PIM']]
+2026-01-10 18:14:05.644 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (c1f6f8507c8a7088aff6397721ca8f3c)] -> xpath: //a[text()='Add Employee']]
+2026-01-10 18:14:05.941 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Sara
+2026-01-10 18:14:06.173 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Khan
+2026-01-10 18:14:06.738 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (c1f6f8507c8a7088aff6397721ca8f3c)] -> xpath: //button[@type='submit']]
+2026-01-10 18:14:13.426 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: AddEmployeeTest
+2026-01-10 18:14:21.450 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 18:14:21.450 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 18:14:21.751 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 18:14:22.004 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 18:14:22.146 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 18:14:26.666 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (4023ba0ac3cd3043b94eec02bae30dda)] -> xpath: //span[text()='PIM']]
+2026-01-10 18:14:28.290 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (4023ba0ac3cd3043b94eec02bae30dda)] -> xpath: //a[text()='Add Employee']]
+2026-01-10 18:14:28.545 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: John
+2026-01-10 18:14:28.752 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Doe
+2026-01-10 18:14:28.954 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (4023ba0ac3cd3043b94eec02bae30dda)] -> xpath: //button[@type='submit']]
+2026-01-10 18:22:54.957 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
+2026-01-10 18:22:55.572 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml
 
-2026-01-05 20:05:17.184 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully.
-2026-01-05 20:07:32.147 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
-2026-01-05 20:07:32.963 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml
+2026-01-10 18:22:55.631 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully from: C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\main\resources\config.properties
+2026-01-10 18:22:56.295 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: SearchEmployeeTest
+2026-01-10 18:23:03.503 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 18:23:03.505 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 18:23:05.831 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 18:23:06.061 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 18:23:07.765 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 18:23:10.907 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (2cf7e315b60730f06323a861b8dbe1f9)] -> xpath: //span[text()='PIM']]
+2026-01-10 18:23:12.654 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (2cf7e315b60730f06323a861b8dbe1f9)] -> xpath: //a[text()='Employee List']]
+2026-01-10 18:23:12.880 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Raja
+2026-01-10 18:23:15.094 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (2cf7e315b60730f06323a861b8dbe1f9)] -> xpath: //button[@type='submit']]
+2026-01-10 18:26:22.578 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
+2026-01-10 18:26:23.196 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml
 
-2026-01-05 20:07:33.025 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully.
-2026-01-05 20:07:43.374 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:07:43.382 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:07:43.387 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:07:43.418 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:07:48.135 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:07:48.136 [TestNG-test-OrangeHRMTest-3] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:07:48.137 [TestNG-test-OrangeHRMTest-3] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:07:48.137 [TestNG-test-OrangeHRMTest-3] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:07:48.138 [TestNG-test-OrangeHRMTest-3] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:07:48.154 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:07:48.155 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 33
-2026-01-05 20:07:48.949 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:07:48.950 [TestNG-test-OrangeHRMTest-1] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:07:48.951 [TestNG-test-OrangeHRMTest-1] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:07:48.951 [TestNG-test-OrangeHRMTest-1] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:07:48.952 [TestNG-test-OrangeHRMTest-1] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:07:48.952 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:07:48.953 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 31
-2026-01-05 20:07:49.167 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:07:49.168 [TestNG-test-OrangeHRMTest-4] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:07:49.168 [TestNG-test-OrangeHRMTest-4] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:07:49.168 [TestNG-test-OrangeHRMTest-4] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:07:49.168 [TestNG-test-OrangeHRMTest-4] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:07:49.169 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:07:49.169 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 34
-2026-01-05 20:07:52.049 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:07:52.050 [TestNG-test-OrangeHRMTest-2] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:07:52.050 [TestNG-test-OrangeHRMTest-2] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:07:52.050 [TestNG-test-OrangeHRMTest-2] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:07:52.051 [TestNG-test-OrangeHRMTest-2] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:07:52.052 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:07:52.052 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 32
-2026-01-05 20:07:55.040 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username invalidUser
-2026-01-05 20:07:56.536 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password invalidPass
-2026-01-05 20:07:57.418 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 20:07:57.606 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username admin
-2026-01-05 20:07:58.216 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password admin123
-2026-01-05 20:08:00.174 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Text matches: Invalid credentials
-2026-01-05 20:08:01.977 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 20:08:02.924 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Element is displayed: Unalbe to describe element
-2026-01-05 20:08:04.813 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:08:04.830 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:08:05.509 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:08:07.292 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:08:08.401 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:08:19.711 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:08:19.712 [TestNG-test-OrangeHRMTest-3] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:08:19.712 [TestNG-test-OrangeHRMTest-3] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:08:19.712 [TestNG-test-OrangeHRMTest-3] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:08:19.713 [TestNG-test-OrangeHRMTest-3] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:08:19.713 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:08:19.714 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 33
-2026-01-05 20:08:20.132 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username admin
-2026-01-05 20:08:20.511 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password admin123
-2026-01-05 20:08:20.797 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 20:08:23.535 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Element is displayed: Element with class:oxd-text oxd-text--span oxd-main-menu-item--name
-2026-01-05 20:08:24.020 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-userdropdown-name
-2026-01-05 20:08:26.106 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-userdropdown-link
-2026-01-05 20:08:30.017 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:09:01.503 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
-2026-01-05 20:09:02.339 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml
+2026-01-10 18:26:23.261 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully from: C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\main\resources\config.properties
+2026-01-10 18:26:23.922 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: SearchEmployeeTest
+2026-01-10 18:26:33.076 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 18:26:33.076 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 18:26:33.568 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 18:26:33.782 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 18:26:33.968 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 18:26:38.321 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (3b71c0702b383c663c6f25885adc5990)] -> xpath: //span[text()='PIM']]
+2026-01-10 18:26:40.048 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (3b71c0702b383c663c6f25885adc5990)] -> xpath: //a[text()='Employee List']]
+2026-01-10 18:26:40.422 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Raja
+2026-01-10 18:26:42.671 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (3b71c0702b383c663c6f25885adc5990)] -> xpath: //button[@type='submit']]
+2026-01-10 18:36:59.425 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
+2026-01-10 18:37:00.113 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml
 
-2026-01-05 20:09:02.393 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully.
-2026-01-05 20:09:10.209 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:09:10.209 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:09:10.566 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:09:11.222 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:09:18.177 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:09:18.180 [TestNG-test-OrangeHRMTest-1] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:09:18.180 [TestNG-test-OrangeHRMTest-1] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:09:18.180 [TestNG-test-OrangeHRMTest-1] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:09:18.182 [TestNG-test-OrangeHRMTest-1] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:09:18.197 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:09:18.197 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 31
-2026-01-05 20:09:19.840 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:09:19.840 [TestNG-test-OrangeHRMTest-3] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:09:19.840 [TestNG-test-OrangeHRMTest-3] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:09:19.840 [TestNG-test-OrangeHRMTest-3] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:09:19.840 [TestNG-test-OrangeHRMTest-3] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:09:19.843 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:09:19.843 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 33
-2026-01-05 20:09:20.562 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:09:20.562 [TestNG-test-OrangeHRMTest-4] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:09:20.562 [TestNG-test-OrangeHRMTest-4] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:09:20.562 [TestNG-test-OrangeHRMTest-4] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:09:20.562 [TestNG-test-OrangeHRMTest-4] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:09:20.562 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:09:20.567 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 34
-2026-01-05 20:09:21.618 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username admin
-2026-01-05 20:09:21.765 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username invalidUser
-2026-01-05 20:09:22.099 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password admin123
-2026-01-05 20:09:22.940 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password invalidPass
-2026-01-05 20:09:23.106 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:09:23.109 [TestNG-test-OrangeHRMTest-2] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:09:23.111 [TestNG-test-OrangeHRMTest-2] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:09:23.112 [TestNG-test-OrangeHRMTest-2] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:09:23.112 [TestNG-test-OrangeHRMTest-2] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:09:23.112 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:09:23.114 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 32
-2026-01-05 20:09:27.697 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 20:09:28.121 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 20:09:29.227 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Element is displayed: Unalbe to describe element
-2026-01-05 20:09:29.414 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Text matches: Invalid credentials
-2026-01-05 20:09:31.323 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:09:31.618 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:09:31.821 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:09:32.028 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:09:34.369 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:09:46.974 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:09:46.974 [TestNG-test-OrangeHRMTest-3] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:09:46.974 [TestNG-test-OrangeHRMTest-3] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:09:46.974 [TestNG-test-OrangeHRMTest-3] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:09:46.974 [TestNG-test-OrangeHRMTest-3] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:09:46.974 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:09:46.974 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 33
-2026-01-05 20:09:47.364 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username admin
-2026-01-05 20:09:47.753 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password admin123
-2026-01-05 20:09:48.073 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 20:09:50.901 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Element is displayed: Element with class:oxd-text oxd-text--span oxd-main-menu-item--name
-2026-01-05 20:09:51.349 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-userdropdown-name
-2026-01-05 20:09:52.845 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-userdropdown-link
-2026-01-05 20:09:56.594 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:21:33.127 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
-2026-01-05 20:21:34.000 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml
+2026-01-10 18:37:00.181 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully from: C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\main\resources\config.properties
+2026-01-10 18:37:00.841 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: SearchEmployeeTest
+2026-01-10 18:37:09.688 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 18:37:09.688 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 18:37:09.989 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 18:37:10.245 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 18:37:10.488 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 18:37:15.070 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (ceabbbafdf733044f4fd5d29c8eab47b)] -> xpath: //span[text()='PIM']]
+2026-01-10 18:37:16.830 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (ceabbbafdf733044f4fd5d29c8eab47b)] -> xpath: //a[text()='Employee List']]
+2026-01-10 18:37:17.238 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: raja
+2026-01-10 18:37:19.512 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (ceabbbafdf733044f4fd5d29c8eab47b)] -> xpath: //button[@type='submit']]
+2026-01-10 18:40:57.929 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
+2026-01-10 18:40:58.605 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\test\resources\testng.xml
 
-2026-01-05 20:21:34.088 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully.
-2026-01-05 20:25:24.603 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.
-2026-01-05 20:25:25.407 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\rhafe\IdeaProjects\OrangeHRMProject\src\test\resources\testng.xml
-
-2026-01-05 20:25:25.455 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully.
-2026-01-05 20:25:35.240 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:25:35.240 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:25:37.831 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:25:37.905 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:25:42.214 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:25:42.217 [TestNG-test-OrangeHRMTest-1] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:25:42.218 [TestNG-test-OrangeHRMTest-1] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:25:42.219 [TestNG-test-OrangeHRMTest-1] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:25:42.220 [TestNG-test-OrangeHRMTest-1] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:25:42.240 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:25:42.242 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 31
-2026-01-05 20:25:45.126 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:25:45.128 [TestNG-test-OrangeHRMTest-4] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:25:45.130 [TestNG-test-OrangeHRMTest-4] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:25:45.131 [TestNG-test-OrangeHRMTest-4] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:25:45.132 [TestNG-test-OrangeHRMTest-4] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:25:45.133 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:25:45.133 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 34
-2026-01-05 20:25:45.728 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:25:45.728 [TestNG-test-OrangeHRMTest-3] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:25:45.728 [TestNG-test-OrangeHRMTest-3] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:25:45.728 [TestNG-test-OrangeHRMTest-3] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:25:45.728 [TestNG-test-OrangeHRMTest-3] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:25:45.728 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:25:45.728 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 33
-2026-01-05 20:25:46.960 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:25:46.960 [TestNG-test-OrangeHRMTest-2] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:25:46.962 [TestNG-test-OrangeHRMTest-2] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:25:46.964 [TestNG-test-OrangeHRMTest-2] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:25:46.964 [TestNG-test-OrangeHRMTest-2] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:25:46.967 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:25:46.968 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 32
-2026-01-05 20:25:48.401 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username invalidUser
-2026-01-05 20:25:49.446 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username admin
-2026-01-05 20:25:49.829 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password invalidPass
-2026-01-05 20:25:50.720 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password admin123
-2026-01-05 20:25:52.303 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 20:25:53.152 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Text matches: Invalid credentials
-2026-01-05 20:25:53.562 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 20:25:54.256 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - Element is displayed: Unalbe to describe element
-2026-01-05 20:25:56.924 [TestNG-test-OrangeHRMTest-4] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:25:57.124 [TestNG-test-OrangeHRMTest-2] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:25:57.204 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:25:57.281 [TestNG-test-OrangeHRMTest-1] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
-2026-01-05 20:25:59.627 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Chrome Browser Launched
-2026-01-05 20:26:03.159 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver Instance Created
-2026-01-05 20:26:03.163 [TestNG-test-OrangeHRMTest-3] ERROR com.orangehrm.utilities.LoggerManager - Error Message
-2026-01-05 20:26:03.164 [TestNG-test-OrangeHRMTest-3] DEBUG com.orangehrm.utilities.LoggerManager - debug Message
-2026-01-05 20:26:03.164 [TestNG-test-OrangeHRMTest-3] FATAL com.orangehrm.utilities.LoggerManager - fatal Message
-2026-01-05 20:26:03.166 [TestNG-test-OrangeHRMTest-3] WARN  com.orangehrm.utilities.LoggerManager - Warn Message
-2026-01-05 20:26:03.166 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver instance is created in ActionDriver
-2026-01-05 20:26:03.167 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver instance is created for Thread: 33
-2026-01-05 20:26:05.568 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:username admin
-2026-01-05 20:26:05.937 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Element with name:password admin123
-2026-01-05 20:26:07.895 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-button oxd-button--medium oxd-button--main orangehrm-login-button
-2026-01-05 20:26:08.736 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Element is displayed: Element with class:oxd-text oxd-text--span oxd-main-menu-item--name
-2026-01-05 20:26:09.171 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-userdropdown-name
-2026-01-05 20:26:10.871 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - Clicked on elementElement with class:oxd-userdropdown-link
-2026-01-05 20:26:14.365 [TestNG-test-OrangeHRMTest-3] INFO  com.orangehrm.utilities.LoggerManager - WebDriver isntance closed.
+2026-01-10 18:40:58.673 [main] INFO  com.orangehrm.utilities.LoggerManager - Configuration properties loaded successfully from: C:\Users\rhafe\IdeaProjects\OrangeHRMProject2\src\main\resources\config.properties
+2026-01-10 18:41:00.822 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: AddEmployeeTest
+2026-01-10 18:41:09.673 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 18:41:09.673 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 18:41:09.968 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 18:41:10.406 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 18:41:10.658 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 18:41:15.311 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (114002518f31e5ceb2851da971052538)] -> xpath: //span[text()='PIM']]
+2026-01-10 18:41:17.912 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (114002518f31e5ceb2851da971052538)] -> xpath: //a[text()='Add Employee']]
+2026-01-10 18:41:18.439 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Ahmed
+2026-01-10 18:41:18.757 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Ali
+2026-01-10 18:41:19.118 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (114002518f31e5ceb2851da971052538)] -> xpath: //button[@type='submit']]
+2026-01-10 18:41:26.067 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: AddEmployeeTest
+2026-01-10 18:41:33.468 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 18:41:33.468 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 18:41:33.678 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 18:41:33.869 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 18:41:34.023 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 18:41:38.418 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (c483d9a0dc6e5a29f6aea5b39009e314)] -> xpath: //span[text()='PIM']]
+2026-01-10 18:41:40.183 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (c483d9a0dc6e5a29f6aea5b39009e314)] -> xpath: //a[text()='Add Employee']]
+2026-01-10 18:41:40.430 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Sara
+2026-01-10 18:41:40.654 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Khan
+2026-01-10 18:41:40.844 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (c483d9a0dc6e5a29f6aea5b39009e314)] -> xpath: //button[@type='submit']]
+2026-01-10 18:41:47.682 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: AddEmployeeTest
+2026-01-10 18:41:55.635 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 18:41:55.637 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 18:41:56.016 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 18:41:56.386 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 18:41:56.569 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 18:42:00.876 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (617f20e14337549e0d7fc5fa7a18aa8b)] -> xpath: //span[text()='PIM']]
+2026-01-10 18:42:02.681 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (617f20e14337549e0d7fc5fa7a18aa8b)] -> xpath: //a[text()='Add Employee']]
+2026-01-10 18:42:02.989 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: John
+2026-01-10 18:42:03.358 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Doe
+2026-01-10 18:42:03.714 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (617f20e14337549e0d7fc5fa7a18aa8b)] -> xpath: //button[@type='submit']]
+2026-01-10 18:42:11.202 [main] INFO  com.orangehrm.utilities.LoggerManager - Setting up WebDriver for class: SearchEmployeeTest
+2026-01-10 18:42:16.428 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized.
+2026-01-10 18:42:16.428 [main] INFO  com.orangehrm.utilities.LoggerManager - ActionDriver initialized for Thread ID: 1
+2026-01-10 18:42:18.376 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin
+2026-01-10 18:42:18.632 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: admin123
+2026-01-10 18:42:20.361 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element
+2026-01-10 18:42:23.358 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (a2a576a1028b1c68580890c7f6378331)] -> xpath: //span[text()='PIM']]
+2026-01-10 18:42:25.162 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (a2a576a1028b1c68580890c7f6378331)] -> xpath: //a[text()='Employee List']]
+2026-01-10 18:42:25.404 [main] INFO  com.orangehrm.utilities.LoggerManager - Entered text: Ahmed
+2026-01-10 18:42:27.641 [main] INFO  com.orangehrm.utilities.LoggerManager - Clicked on element: [[ChromeDriver: chrome on windows (a2a576a1028b1c68580890c7f6378331)] -> xpath: //button[@type='submit']]
